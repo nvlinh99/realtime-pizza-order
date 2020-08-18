@@ -1,0 +1,21 @@
+{
+  "name": "realtime-pizza-order",
+  "version": "1.0.0",
+  "description": "Realtime pizza order app",
+	"main": "index.js",
+	"scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": "https://github.com/nvlinh99/realtime-pizza-order.git",
+  "author": "Linh Nguyen Vu <nguyenvulinh99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

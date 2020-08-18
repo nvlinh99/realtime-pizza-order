@@ -1,1 +1,40 @@
-$primary-color: #000;
+@import './_variables.scss';
+
+body {
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: $dark;
+}
+
+nav li:last-child a {
+	background-color: $primary;
+	&:hover {
+		background-color: $primary-hover;
+	}
+}
+
+nav li a:hover {
+	transition: $smooth;
+	&:hover {
+		color: $primary;
+	}
+}
+
+section.hero {
+	background: $secondary;
+}
+
+.size {
+	background: $secondary;
+}
+
+.add-to-card {
+	border: 2px solid $primary;
+	color: $primary;
+	transition: $smooth;
+	&:hover {
+		background: $primary;
+		border-color: $pure;
+		color: $pure;
+	}
+}

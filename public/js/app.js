@@ -5264,7 +5264,7 @@ addToCart.forEach(function (btn) {
     var pizza = JSON.parse(btn.dataset.pizza);
     updateCart(pizza);
   });
-});
+}); // Re
 
 /***/ }),
 

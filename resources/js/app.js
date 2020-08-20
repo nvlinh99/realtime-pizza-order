@@ -35,3 +35,12 @@ addToCart.forEach((btn) => {
 		updateCart(pizza)
 	});
 });
+
+// Remove alert message
+
+const alertMessage = document.querySelector('#success-alert');
+if(alertMessage) {
+	setTimeout(() => {
+		alertMessage.remove();
+	}, 2000);
+}

@@ -2,64 +2,64 @@
 	"_id": {
 		"$oid": "5eee651f739f8c674fd736ee"
 	},
-	"name": "Margherita",
+	"name": "Pizza Hải sản",
 	"image": "pizza.png",
-	"price": "250",
-	"size": "small"
+	"price": "15",
+	"size": "SMALL"
 }, {
 	"_id": {
 		"$oid": "5eee6671a27a66807cf2bea3"
 	},
-	"name": "Marinara",
+	"name": "Pizza Gà",
 	"image": "pizza.png",
-	"price": "300",
-	"size": "medium"
+	"price": "25",
+	"size": "MEDIUM"
 }, {
 	"_id": {
 		"$oid": "5eee6692a27a66807cf2bea4"
 	},
-	"name": "Carbonara",
+	"name": "Pizza Thịt bò xong khói",
 	"image": "pizza.png",
-	"price": "200",
-	"size": "small"
+	"price": "20",
+	"size": "SMALL"
 }, {
 	"_id": {
 		"$oid": "5eee66a5a27a66807cf2bea5"
 	},
-	"name": "Americana",
+	"name": "Pizza Phở",
 	"image": "pizza.png",
-	"price": "500",
-	"size": "large"
+	"price": "30",
+	"size": "LARGE"
 }, {
 	"_id": {
 		"$oid": "5eee66c4a27a66807cf2bea6"
 	},
-	"name": "Chicken Mushroom",
+	"name": "Pizza Thịt heo phô mai",
 	"image": "pizza.png",
-	"price": "350",
-	"size": "medium"
+	"price": "18",
+	"size": "MEDIUM"
 }, {
 	"_id": {
 		"$oid": "5eee66cfa27a66807cf2bea7"
 	},
-	"name": "Paneer pizza",
+	"name": "Pizza truyền thống",
 	"image": "pizza.png",
-	"price": "200",
-	"size": "small"
+	"price": "15",
+	"size": "SMALL"
 }, {
 	"_id": {
 		"$oid": "5eee66eea27a66807cf2bea8"
 	},
-	"name": "Vegies pizza",
+	"name": "Pizza Thập cẩm đặc biệt",
 	"image": "pizza.png",
-	"price": "600",
-	"size": "large"
+	"price": "35",
+	"size": "LARGE"
 }, {
 	"_id": {
 		"$oid": "5eee6717a27a66807cf2bea9"
 	},
-	"name": "Pepperoni",
+	"name": "Pizza Hải sản đặc biệt",
 	"image": "pizza.png",
-	"price": "500",
-	"size": "medium"
+	"price": "35",
+	"size": "MEDIUM"
 }]

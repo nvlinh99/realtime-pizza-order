@@ -24,7 +24,7 @@
 				</div>
 				<div class="flex items-center justify-around mt-6">
 					<span class="font-bold text-lg">$<%= pizza.price %></span>
-					<button class="add-to-card py-1 px-6 rounded-full flex items-center font-bold">
+					<button data-pizza="<%= JSON.stringify(pizza) %>" class="add-to-card py-1 px-6 rounded-full flex items-center font-bold">
 						<span>+</span>
 						<span class="ml-4">Add</span>
 					</button>

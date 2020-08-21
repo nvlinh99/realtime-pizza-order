@@ -12,6 +12,7 @@ function orderController(){
 						'createdAt': -1,
 				}
 			});
+			res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0')
 			res.render('customers/orders', { orders, moment })
 		},
 		store(req, res) {
@@ -32,7 +33,7 @@ function orderController(){
 			order.save().then(result => {
 				req.flash('success', 'Order placed successfully');
 				delete req.session.cart;
-				res.redirect('/customers/orders');
+				res.redirect('/customer/orders');
 			}).catch(err => {
 				req.flash('error', 'Something went wrong!');
 				return res.redirect('/cart');

@@ -3,8 +3,11 @@ const authController = require('../app/controllers/auth.controller')();
 const cartController = require('../app/controllers/cart.controller')();
 const orderController = require('../app/controllers/order.controller')();
 const AdminOrderController = require('../app/controllers/admin.controller')();
+
+// Middlewares
 const guest = require('../app/middlewares/guest');
 const auth = require('../app/middlewares/auth');
+const admin = require('../app/middlewares/admin');
 
 function initRoutes(app) {
 	app.get('/', homeController.index);
@@ -25,7 +28,7 @@ function initRoutes(app) {
 	app.get('/customer/orders', auth, orderController.index);
 
 	// Admin routes
-	app.get('/admin/orders', auth, AdminOrderController.index)
+	app.get('/admin/orders', admin, AdminOrderController.index)
 
 }
 

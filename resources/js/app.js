@@ -1,6 +1,8 @@
 const axios = require('axios');
 const Noty = require('noty');
 
+const initAdmin = require('./admin');
+
 let addToCart = document.querySelectorAll('.add-to-card');
 let cartCounter = document.querySelector('#cart-counter');
 
@@ -43,4 +45,6 @@ if(alertMessage) {
 	setTimeout(() => {
 		alertMessage.remove();
 	}, 2000);
-}
+};
+
+initAdmin();

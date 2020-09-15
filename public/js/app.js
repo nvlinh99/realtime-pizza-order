@@ -26503,6 +26503,8 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
 var Noty = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 
+var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+
 var initAdmin = __webpack_require__(/*! ./admin */ "./resources/js/admin.js");
 
 var addToCart = document.querySelectorAll('.add-to-card');
@@ -26547,7 +26549,36 @@ if (alertMessage) {
 }
 
 ;
-initAdmin();
+initAdmin(); // Update status
+
+var statuses = document.querySelectorAll('.status_line');
+var hiddenInput = document.querySelector('#hiddenInput');
+var order = hiddenInput ? hiddenInput.value : null;
+order = JSON.parse(order);
+var time = document.createElement('small');
+
+function updateStatus(order) {
+  var stepCompleted = true;
+  statuses.forEach(function (status) {
+    var dataProp = status.dataset.status;
+
+    if (stepCompleted) {
+      status.classList.add('step-completed');
+    }
+
+    if (dataProp === order.status) {
+      stepCompleted = false;
+      time.innerText = moment(order.updatedAt).format('hh:mm A');
+      status.appendChild(time);
+
+      if (status.nextElementSibling) {
+        status.nextElementSibling.classList.add('current');
+      }
+    }
+  });
+}
+
+updateStatus(order);
 
 /***/ }),
 

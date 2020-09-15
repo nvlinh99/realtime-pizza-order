@@ -38,6 +38,17 @@ function orderController(){
 				req.flash('error', 'Something went wrong!');
 				return res.redirect('/cart');
 			});
+		},
+		async show(req, res) {
+			const { id } = req.params;
+			const order = await Order.findById({ _id: id});
+			// Authorize customer
+			if(req.user._id.toString() === order.customerId.toString()) {
+				return res.render('customers/singleOrder', { order });
+			}
+			else {
+				return res.redirect('/');
+			}
 		}
 	}
 }

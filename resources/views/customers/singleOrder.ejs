@@ -1,0 +1,19 @@
+<%- include('../common/header'); -%>
+	<section class="status">
+		<div class="container mx-auto">
+			<div class="status-box w-2/3 mx-auto">
+				<div class="flex items-center justify-between mb-12">
+					<h1 class="text-xl font-bold">Track delivery status</h1>
+					<h6 class="bg-white rounded-full px-4 py-1 text-green-600 text-xs"><%= order._id%></h6>
+				</div>
+				<ul>
+					<li class="status_line text-xl pb-16 step-completed"><span>Order Placed</span></li>
+					<li class="status_line text-xl pb-16 current"><span>Order Confirmation</span></li>
+					<li class="status_line text-xl pb-16"><span>Preparation</span></li>
+					<li class="status_line text-xl pb-16"><span>Out for Delivery</span></li>
+					<li class="status_line text-xl"><span>Completed</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+<%- include('../common/footer'); -%>

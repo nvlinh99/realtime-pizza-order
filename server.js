@@ -71,6 +71,16 @@ app.use(expressLayout);
 app.set('views', path.join(__dirname, './resources/views'));
 app.set('view engine', 'ejs'); 
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
+
+// Socket
+const io = require('socket.io')(server);
+io.on('connection', (socket) => {
+	socket.on('join', (orderId) => {
+		socket.join(orderId);
+	});
+});
+
+

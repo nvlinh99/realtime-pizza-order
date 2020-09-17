@@ -8,6 +8,7 @@ const session = require('express-session');
 const flash = require('express-flash');
 const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
+const Emitter = require('events');
 
 const app = express();
 app.enable('trust proxy');
@@ -30,6 +31,10 @@ connection
   .catch((err) => {
     console.log(`DB Connection Error: ${err.message}`);
 	});
+
+// Event emitter
+const eventEmitter = new Emitter();
+app.set('eventEmitter', eventEmitter);
 
 // Session store
 let mongoStore = new MongoStore({
@@ -83,4 +88,11 @@ io.on('connection', (socket) => {
 	});
 });
 
+eventEmitter.on('orderUpdated', (data) => {
+	io.to(`order_${data.id}`).emit('orderUpdated', data)
+});
+
+eventEmitter.on('orderPlaced', (data) => {
+	io.to('adminRoom').emit('orderPlaced', data);	
+})
 
